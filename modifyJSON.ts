@@ -1,6 +1,5 @@
 import modifyJSONWithArray from "./jsonModify"
 
-
 let output: any = modifyJSONWithString("edit", "text");
 console.log(output);
 
@@ -10,8 +9,6 @@ console.log(output);
 // 2: Name of modification file
 function modifyJSONWithString(dataString: string, toModify: string) {
   const data = require("../" + dataString + ".json"); //Load JSON file
-  console.log(data);
-  console.log(typeof data);
   //load txt file
   const fs = require("fs");
   try {

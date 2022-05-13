@@ -11,7 +11,6 @@ export default function modifyJSONWithArray(
 //Merge data with JSON keeping the value of the string
 function modifyJSON(data: any, jsonAsString: string) {
   let jsonAsObject: any = JSON.parse(parseTxt(jsonAsString));
-  console.log(data);
   return { ...data, ...jsonAsObject }; //This line erase my first object instead of merging the two
 }
 

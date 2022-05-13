@@ -8,11 +8,11 @@ console.log(output);
 // 1: Name of data file 
 // 2: Name of modification file
 function modifyJSONWithString(dataString: string, toModify: string) {
-  const data = require("../" + dataString + ".json"); //Load JSON file
-  //load txt file
+  //Load files
+  const data = require("../data/" + dataString + ".json");
   const fs = require("fs");
   try {
-    var dataToChange = fs.readFileSync(toModify + ".txt", "utf8");
+    var dataToChange = fs.readFileSync("data/" + toModify + ".txt", "utf8");
   } catch (err) {
     console.error(err);
   }

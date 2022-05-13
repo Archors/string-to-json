@@ -1,7 +1,7 @@
 import modifyJSONWithArray from "./jsonModify"
 
 let output: any = modifyJSONWithString("edit", "text");
-console.log(output);
+console.log(output.page1);
 
 //Modify a JSON file with a string
 //Takes two string as parameter :

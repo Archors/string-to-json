@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const jsonModify_1 = require("./jsonModify");
 let output = modifyJSONWithString("edit", "text");
-console.log(output);
+console.log(output.page1);
 //Modify a JSON file with a string
 //Takes two string as parameter :
 // 1: Name of data file 

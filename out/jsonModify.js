@@ -1,16 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const mergeDeep_1 = require("./mergeDeep");
 //Merge multiple strings with JSON
 function modifyJSONWithArray(data, jsonAsArray) {
-    for (let i = 0; i < jsonAsArray.length; i++)
-        data = modifyJSON(data, jsonAsArray[i]);
+    for (let json of jsonAsArray)
+        data = modifyJSON(data, json);
     return data;
 }
 exports.default = modifyJSONWithArray;
 //Merge data with JSON keeping the value of the string
 function modifyJSON(data, jsonAsString) {
-    let jsonAsObject = JSON.parse(parseTxt(jsonAsString));
-    return Object.assign(Object.assign({}, data), jsonAsObject); //This line erase my first object instead of merging the two
+    return (0, mergeDeep_1.default)(data, JSON.parse(parseTxt(jsonAsString)));
 }
 //Parse dot json to json
 function parseTxt(txt) {
